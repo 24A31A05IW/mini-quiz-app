@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.5s ease;
+}
+
+.quiz-container {
+  background: linear-gradient(145deg, #ffffff, #f1f8e9);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 95%;
+  max-width: 550px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+}
+
+h1 {
+  color: #546e7a;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+button {
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffd54f, #ffecb3);
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffca28, #ffe082);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Options */
+.option {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.option:hover {
+  transform: scale(1.03);
+}
+
+.option.correct {
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+}
+
+.option.incorrect {
+  background: linear-gradient(135deg, #ffcdd2, #ef9a9a);
+}
+
+/* Timer */
+#timer {
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  color: #455a64;
+}
+
+/* Hidden container */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 1.8rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
