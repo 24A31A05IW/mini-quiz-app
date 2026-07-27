@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Quiz App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Fundamentals — Pop Quiz</title>
+
+    <meta name="description" content="A short, timed multiple-choice quiz on HTML, CSS, and JavaScript fundamentals.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Courier+Prime:wght@400;700&family=Caveat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="quiz-container">
-    <h1>Mini Quiz App</h1>
 
-    <div id="question-container">
-      <div id="timer">Time Left: <span id="time">15</span>s</div>
-      <p id="question"></p>
-      <div id="options"></div>
-      <button id="next-btn">Next</button>
-    </div>
+    <main class="sheet">
 
-    <div id="score-container" class="hidden">
-      <h2>Your Score: <span id="score"></span> / 10</h2>
-      <h3>High Score: <span id="high-score"></span></h3>
-      <button id="restart-btn">Restart Quiz</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+        <header class="letterhead">
+            <div class="letterhead-top">
+                <span class="subject">WEB FUNDAMENTALS</span>
+                <span class="quiz-no">QUIZ NO. 04</span>
+            </div>
+            <div class="letterhead-rule"></div>
+            <div class="letterhead-fields">
+                <span>Name: <em>Vennela</em></span>
+                <span id="dateField">Date: —</span>
+            </div>
+        </header>
+
+        <div id="question-container" class="paper-body">
+
+            <div class="q-row">
+                <span id="qNumber" class="q-number">Q1</span>
+
+                <div class="timer-stamp" aria-live="polite">
+                    <svg viewBox="0 0 60 60" class="timer-ring" aria-hidden="true">
+                        <circle cx="30" cy="30" r="26" class="timer-ring-track" />
+                        <circle cx="30" cy="30" r="26" class="timer-ring-fill" id="timerRing" />
+                    </svg>
+                    <span id="time" class="timer-num">15</span>
+                </div>
+            </div>
+
+            <p id="question" class="question-text"></p>
+
+            <div id="options" class="options"></div>
+
+            <button id="next-btn" class="stamp-btn">Next →</button>
+        </div>
+
+        <div id="score-container" class="paper-body hidden">
+
+            <div class="grade-wrap">
+                <svg viewBox="0 0 160 160" class="grade-stamp" aria-hidden="true">
+                    <circle cx="80" cy="80" r="70" class="grade-ring" />
+                </svg>
+                <div class="grade-text">
+                    <span id="gradeLetter">A</span>
+                    <span id="gradePercent">100%</span>
+                </div>
+            </div>
+
+            <h2 class="score-line">Score: <span id="score"></span> / 10</h2>
+
+            <p class="margin-note">best so far: <span id="high-score"></span>/10</p>
+
+            <button id="restart-btn" class="stamp-btn">Retake Quiz</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
